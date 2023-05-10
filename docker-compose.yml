@@ -17,6 +17,7 @@ services:
     command: [ "-Dkeycloak.migration.strategy=IGNORE_EXISTING" ]
     ports:
       - 8080:8080
+    user: root
     environment:
       KEYCLOAK_USER: admin
       KEYCLOAK_PASSWORD: admin
@@ -48,6 +49,9 @@ services:
     build:
       dockerfile: docker/Dockerfile.angular
       context: .
+    ports:
+      - 8082:8080
+    # user: root
   proxy:
     image: nginx:alpine
     depends_on:
