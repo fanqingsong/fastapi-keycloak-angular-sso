@@ -35,7 +35,7 @@ do the following:
    and give the stack a few moments to fire up. You can follow the logs
    with
    ```
-   $ docker-compose -f logs
+   $ docker-compose logs -f 
    ```
 1. Open a browser and navigate to `https://proxy/something-cool`. The
    browser will throw some warnings due to the self-signed certificate,
